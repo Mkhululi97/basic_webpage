@@ -1,0 +1,48 @@
+.intro-section {
+  background-image: url(images/img-table-mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* object-fit: cover; */
+  height: 65vh;
+}
+
+.intro-img {
+  width: 20rem;
+}
+.places-img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  margin-top: 18px;
+}
+
+tr {
+  background-color: lightgray;
+  height: 25px;
+  font-size: 1.125rem;
+}
+th {
+  width: 10rem;
+}
+.historical-places-h2 {
+  padding-left: 2%;
+}
+@media only screen and (max-width: 33.75em) {
+  body {
+    /* background: red; */
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    /* margin: revert revert; */
+  }
+}
