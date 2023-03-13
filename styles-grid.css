@@ -2,19 +2,18 @@
   background-image: url(images/img-table-mountain.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* object-fit: cover; */
   height: 65vh;
 }
 
 .intro-img {
   width: 20rem;
 }
-.places-img {
-  width: 10rem;
-  height: 10rem;
-  object-fit: cover;
-}
 
+/* ### CITY SECTION ### */
+.img-city {
+  width: 100%;
+}
+/* ### LANGUAGES SECTION ### */
 table {
   width: 100%;
   margin-top: 18px;
@@ -28,10 +27,27 @@ tr {
 th {
   width: 10rem;
 }
-.historical-places-h2 {
-  padding-left: 2%;
+
+/* ### HISTORICAL SECTION ### */
+.historical-places {
+  display: flex;
+  gap: 35px;
 }
+.places-img {
+  float: right;
+  object-fit: cover;
+  width: 13rem;
+  margin-right: 10px;
+}
+.historical-places p {
+  width: 33ch;
+}
+
+/* @@@@ QUERIES @@@@ */
 @media only screen and (max-width: 33.75em) {
+  body {
+    /* background-color: red; */
+  }
   h1 {
     font-size: 1.5rem;
   }
@@ -40,5 +56,19 @@ th {
   }
   h3 {
     font-size: 1.2rem;
+  }
+
+  /* ### HISTORICAL SECTION ### */
+  .historical-places {
+    display: block;
+    gap: 35px;
+  }
+  .place1 img,
+  .place3 img {
+    margin-right: revert;
+    margin-left: 10px;
+  }
+  .place2 img {
+    float: left;
   }
 }
