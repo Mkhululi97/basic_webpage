@@ -36,27 +36,24 @@ p {
   font-size: 1.8rem;
   line-height: 1.7;
   letter-spacing: 0.3px;
-  width: 50ch;
+  width: 40ch;
   padding-inline: 10px;
 }
 .places-text {
   font-size: 1.4rem;
-  width: 20ch;
 }
 .places-img {
   width: 20rem;
   height: 20rem;
   object-fit: cover;
+  margin-left: 5px;
 }
 /* UTILITY CLASSES */
 .centering--container {
   max-width: 120rem;
   margin: 0 auto;
-  /* padding-inline: 10px; */
 }
-.historical-places {
-  max-width: 135rem;
-}
+
 .display--flex {
   display: flex;
 }
@@ -115,10 +112,12 @@ th {
 .place {
   gap: 18px;
 }
+.places-img {
+  float: right;
+}
 @media (max-width: 46.2em /* ~738px */) {
   h1 {
     font-size: 2.4rem;
-    /* color: #fff; */
   }
   h2 {
     font-size: 2rem;
@@ -141,7 +140,6 @@ th {
     gap: 20px;
     padding-top: 16px;
     padding-bottom: 64px;
-    /* display: block; */
   }
   .intro-img {
     width: 15rem;
@@ -170,6 +168,11 @@ th {
   }
   .places-img {
     padding-inline: 10px;
+  }
+  .place2 img {
+    float: left;
+    margin-left: revert;
+    margin-right: 5px;
   }
   .place {
     gap: revert;
