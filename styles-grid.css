@@ -6,7 +6,7 @@
 }
 
 .intro-img {
-  width: 20rem;
+  width: 17rem;
 }
 
 /* ### CITY SECTION ### */
@@ -29,25 +29,23 @@ th {
 }
 
 /* ### HISTORICAL SECTION ### */
-.historical-places {
-  display: flex;
-  gap: 35px;
-}
 .places-img {
-  float: right;
+  float: left;
   object-fit: cover;
-  width: 13rem;
+  width: 10rem;
   margin-right: 10px;
-}
-.historical-places p {
-  width: 33ch;
 }
 
 /* @@@@ QUERIES @@@@ */
-@media only screen and (max-width: 33.75em) {
-  body {
-    /* background-color: red; */
+@media only screen and (max-width: 45.5em) {
+  .place-2 img {
+    float: right;
+    margin-left: 5px;
+    margin-right: revert;
   }
+}
+
+@media only screen and (max-width: 27.6em) {
   h1 {
     font-size: 1.5rem;
   }
@@ -65,10 +63,9 @@ th {
   }
   .place1 img,
   .place3 img {
-    margin-right: revert;
     margin-left: 10px;
   }
-  .place2 img {
-    float: left;
+  .places-img {
+    margin-right: 10px;
   }
 }
