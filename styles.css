@@ -13,41 +13,41 @@ body {
   font-family: "Merriweather", serif;
   padding-bottom: 72px;
 }
-.intro,
+.background-image,
 .city-container,
 .languages-container {
   margin-bottom: 72px;
 }
 h1 {
   font-size: 3.6rem;
+  color: #fff;
 }
 h2 {
   font-size: 2.8rem;
   margin-bottom: 32px;
-  padding-inline: 10px;
 }
 h3 {
   font-size: 2.4rem;
   font-weight: 400;
   margin-bottom: 9px;
-  padding-inline: 10px;
 }
 p {
   font-size: 1.8rem;
   line-height: 1.7;
   letter-spacing: 0.3px;
-  width: 40ch;
-  padding-inline: 10px;
 }
 .places-text {
   font-size: 1.4rem;
 }
-.places-img {
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-  margin-left: 5px;
+h2,
+p,
+.city-img,
+.table,
+.place1,
+.place3 {
+  padding-inline: 10px;
 }
+
 /* UTILITY CLASSES */
 .centering--container {
   max-width: 120rem;
@@ -58,18 +58,17 @@ p {
   display: flex;
 }
 /* INTRO SECTION */
-.intro {
+.background-image {
   background-image: url(images/img-table-mountain.jpg);
-  background-repeat: no-repeat;
   background-size: 100%;
-  height: 60vh;
+  padding-block: 11%;
+  background-repeat: no-repeat;
 }
-.intro-container {
+.background-image .display--flex {
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 60px;
+  padding-inline: 10px;
 }
-
 .intro-img {
   width: 30rem;
 }
@@ -79,7 +78,14 @@ p {
   align-items: center;
 }
 .city-img {
+  float: left;
+  margin-right: 20px;
   width: 45rem;
+}
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 /* LANGUAGES SECTION */
 .languages-text {
@@ -94,9 +100,7 @@ table {
   width: 100%;
   margin-top: 18px;
 }
-.table {
-  padding-inline: 10px;
-}
+
 tr {
   background-color: lightgray;
   height: 30px;
@@ -108,14 +112,24 @@ th {
 /* HISTORICAL SECTION */
 .historical-section {
   justify-content: space-between;
-}
-.place {
-  gap: 18px;
+  gap: 20px;
 }
 .places-img {
   float: right;
 }
+.places-img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  margin-left: 5px;
+}
+p.places-text {
+  width: revert;
+  padding-inline: revert;
+}
+/* ===== QUERIES ===== */
 @media (max-width: 46.2em /* ~738px */) {
+  /* GENERAL STYLES */
   h1 {
     font-size: 2.4rem;
   }
@@ -127,22 +141,13 @@ th {
     font-size: 1.8rem;
   }
   p {
-    width: revert;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
   /* INTRO SECTION */
-  .intro {
-    height: revert;
-    margin-bottom: 36px;
-  }
-  .intro-container {
+  .background-image .display--flex {
     flex-direction: column;
     gap: 20px;
-    padding-top: 16px;
-    padding-bottom: 64px;
-  }
-  .intro-img {
-    width: 15rem;
   }
   /* CITY SECTION */
   .city-container {
@@ -151,8 +156,7 @@ th {
     margin-bottom: 36px;
   }
   .city-img {
-    width: 100%;
-    padding-inline: 10px;
+    width: revert;
   }
   /* LANGUAGES SECTION */
   .languages-container {
@@ -166,15 +170,34 @@ th {
   .place2 .place {
     flex-direction: row-reverse;
   }
-  .places-img {
-    padding-inline: 10px;
-  }
   .place2 img {
     float: left;
     margin-left: revert;
-    margin-right: 5px;
+    margin-right: 10px;
+  }
+  .place2 {
+    padding-inline: 10px;
   }
   .place {
     gap: revert;
+  }
+}
+@media (max-width: 26.13em /* ~467px */) {
+  /* GENERAL */
+  h1 {
+    font-size: 2rem;
+  }
+  /* INTRO SECTION */
+  .intro-img {
+    width: 15rem;
+  }
+  /* HISTORY SECTION */
+  .city-text {
+    float: left;
+  }
+  .city-img {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    width: 100%;
   }
 }
